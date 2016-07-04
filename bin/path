@@ -1,0 +1,6 @@
+#!/bin/bash
+xsl="../lib/xsl"
+samples="../lib/samples"
+meta="../lib/metadata_to_xsl.json"
+schema="../lib/schema/tei_all.rnc"
+test="../test"
