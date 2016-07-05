@@ -1,6 +1,6 @@
 {
 " elsevier" : "_elsevier.xsl",
 "iop" : "_iop.xsl",
-"oup" : "",
-"nature" : "_nature.xsl",
+"oup" : "_oup.xsl",
+"nature" : "_nature.xsl"
 }
