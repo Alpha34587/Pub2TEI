@@ -1,0 +1,12 @@
+#!/bin/bash
+cd ..
+xsl="lib/xsl"
+samples="lib/samples"
+meta="lib/json/metadata_to_xsl.json"
+schema="lib/schema/tei_all.rnc"
+
+source lib/sh/main.sh
+source lib/sh/remove_dtd.sh
+source lib/sh/retrieve_editor.sh
+
+main $1 $2 $3

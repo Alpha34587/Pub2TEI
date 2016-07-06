@@ -2,7 +2,7 @@
 source "../lib/sh/retrieve_editor.sh"
 source "../lib/sh/remove_dtd.sh"
 xsl="../lib/xsl"
-meta="../lib/metadata_to_xsl.json"
+meta="../lib/json/metadata_to_xsl.json"
 res="resources/pub2tei"
 
 @test "apply the good xsl stylesheet" {

@@ -1,13 +1,5 @@
 #!/bin/bash
-i=0
-xsl="../lib/xsl"
-samples="../lib/samples"
-meta="../lib/metadata_to_xsl.json"
-schema="../lib/schema/tei_all.rnc"
-sh="../lib/sh"
-source $sh/retrieve_editor.sh
-source $sh/remove_dtd.sh
-
+function main {
 for f in $1/*.xml
 do
   b=`basename $f .xml`
@@ -21,3 +13,4 @@ do
   fi
 done
 xlo $schema $2
+}
