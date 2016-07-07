@@ -1,12 +1,9 @@
-#!/bin/bash
-cd ..
-xsl="lib/xsl"
-samples="lib/samples"
-meta="lib/json/metadata_to_xsl.json"
-schema="lib/schema/tei_all.rnc"
-
-source lib/sh/main.sh
-source lib/sh/remove_dtd.sh
-source lib/sh/retrieve_editor.sh
-
-main $1 $2 $3
+#!/usr/bin/env ruby
+require '../lib/rb/main'
+input_arg = ARGV.shift
+meta_arg = ARGV.shift
+out_arg = ARGV.shift
+raise "missing input argument(s) !" unless input_arg
+raise "missing meta argument(s) !" unless meta_arg
+raise "missing output argument(s) !" unless out_arg
+Pub2tei.main(input_arg,meta_arg,out_arg)

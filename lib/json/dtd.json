@@ -1,0 +1,13 @@
+{
+  "journalpublishing.dtd":"../lib/DTD/publishing2.3",
+  "art452.dtd": "../lib/DTD/art452",
+  "art501.dtd":"../lib/DTD/art501",
+  "art510.dtd":"../lib/DTD/art510",
+  "http://ej.iop.org/dtd/iopv1_5_2.dtd":"../lib/DTD/IOP",
+  "NPG_XML_Article.dtd":"../lib/DTD/NPG_XML_Article",
+  "http://ej.iop.org/dtd/iopv1_5_1.dtd":"../lib/DTD/IOP",
+  "http://ej.iop.org/dtd/iopv1_4_5.dtd":"../lib/DTD/IOP",
+  "http://dtd.nlm.nih.gov/publishing/2.3/journalpublishing.dtd":"../lib/DTD/publishing2.3",
+  "http://ej.iop.org/dtd/iopv1_4_6.dtd":"../lib/DTD/IOP",
+  "headerx.dtd":"../lib/DTD/IOP"
+}
