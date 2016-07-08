@@ -27,10 +27,10 @@ class OutGenerator
 
   def populate_dtd(_e_xmllint, _dtd)
     if (@xmllint_log.has_key?(_dtd))
-      @xmllint_log[_dtd].push(_e_xmllint)
+      @xmllint_log[_dtd].concat(_e_xmllint.split("\n"))
     else
       @xmllint_log[_dtd] = []
-      @xmllint_log[_dtd].push(_e_xmllint)
+      @xmllint_log[_dtd] = _e_xmllint.split("\n")
     end
   end
 
