@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
-require '../lib/rb/main'
+require '../lib/rb/pub2tei'
+require '../lib/rb/out_generator'
+require "/home/smeoni/Documents/xlo/lib/xlo"
+
 input_arg = ARGV.shift
 meta_arg = ARGV.shift
 out_arg = ARGV.shift
