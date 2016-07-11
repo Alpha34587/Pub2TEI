@@ -1,12 +1,24 @@
 #!/usr/bin/env ruby
 require '../lib/rb/pub2tei'
 require '../lib/rb/out_generator'
-require "/home/smeoni/Documents/xlo/lib/xlo"
+require "xlo"
+require "thor"
 
-input_arg = ARGV.shift
-meta_arg = ARGV.shift
-out_arg = ARGV.shift
-raise "missing input argument(s) !" unless input_arg
-raise "missing meta argument(s) !" unless meta_arg
-raise "missing output argument(s) !" unless out_arg
-Pub2tei.main(input_arg,meta_arg,out_arg)
+class MyCLI < Thor
+  desc "start process","start pub2tei process"
+  method_option :input, :aliases => "-i", :desc => "Specify the path of the folder who contains editor's xml files"
+  method_option :metadata, :aliases => "-m", :desc => "Specify the path of the folder who contains istex's metadata"
+  method_option :output, :aliases => "-o", :desc => "Specify the path of the folder who contains the result of the transformation"
+  method_option :trace, :aliases => "-t", :desc => "if the value of this argument is true then the process generate a folder who contains files for each main phase of the process ", :required => false, :type => :boolean
+  def start
+    if (options[:trace] == nil)
+      Pub2tei.main(options[:input],options[:metadata],options[:output],false)
+    else
+      Pub2tei.main(options[:input],options[:metadata],options[:output],options[:trace])
+    end
+  end
+end
+
+  if __FILE__ == $0
+    cli = MyCLI.start(ARGV)
+  end
